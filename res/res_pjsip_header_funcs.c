@@ -395,9 +395,9 @@ static void incoming_response(struct ast_sip_session *session, pjsip_rx_data * r
 	pjsip_status_line status = rdata->msg_info.msg->line.status;
 
 	/* Skip responses different of 200 OK, when 2xx is received. */
-	if (session->inv_session->state != PJSIP_INV_STATE_CONNECTING || status.code!=200) {
-		return;
-	}
+	// if (session->inv_session->state != PJSIP_INV_STATE_CONNECTING || status.code!=200) {
+	// 	return;
+	// }
 
 	if (!datastore) {
 		if (!(datastore =
